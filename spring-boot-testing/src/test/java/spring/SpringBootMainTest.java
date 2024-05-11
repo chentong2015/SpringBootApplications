@@ -11,6 +11,7 @@ import spring.service.HomeService;
 
 // TODO. 关于SpringBootTest测试的配置
 //  @SpringBootTest会自动找到主启动类用于启动Spring application context
+//  @SpringBootTest集成测试如果无法启动ApplicationContext报错
 // 1. 配置要启动的Spring Boot Main类
 // 2. 配置应用启动的随机端口，避免多个测试post冲突
 // 3. 设置特殊的测试properties
