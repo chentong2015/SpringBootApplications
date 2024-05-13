@@ -13,6 +13,3 @@ TODO. spring-boot-starter: 集成和准备项目所需要依赖，内嵌tomcat�
         <artifactId>tomcat-embed-core</artifactId>
      </dependency>
 </dependency>
-
-Spring Boot 3.0 requires Java 17 as a minimum version.
-Spring Boot 最新版本包含Spring Web的最新版本
