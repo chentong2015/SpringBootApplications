@@ -6,7 +6,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.http.MediaType;
-import org.springframework.security.test.context.support.WithMockUser;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.MvcResult;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
@@ -20,17 +19,16 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 
 @SpringBootTest
 @AutoConfigureMockMvc
-public class MockMvcIT2 {
+public class MockMvcDemo2IT {
 
     @Autowired
     private MockMvc mockMvc;
 
-    // 使用模拟的账号进行安全登陆，进行测试
     @Test
-    @WithMockUser(username = "ctong", password = "ctong123")
     void get_index() {
         try {
-            mockMvc.perform(MockMvcRequestBuilders.get("/index").accept(MediaType.APPLICATION_JSON))
+            mockMvc.perform(MockMvcRequestBuilders.get("/index")
+                            .accept(MediaType.APPLICATION_JSON))
                     .andExpect(status().isOk())
                     .andExpect(content().string("Index Page"));
         } catch (Exception exception) {
@@ -58,12 +56,13 @@ public class MockMvcIT2 {
     // 从classpath资源文件路径添加测试数据
     @Test
     void testPostMethod() throws Exception {
-        InputStream resourceStream = this.getClass().getResourceAsStream("myObject.json");
+        InputStream resourceStream = this.getClass().getResourceAsStream("request.json");
         assert resourceStream != null;
         mockMvc.perform(post("/post")
                         .content(resourceStream.readAllBytes())
                         .contentType(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk())
                 .andExpect(content().string("OK"));
+        resourceStream.close();
     }
 }

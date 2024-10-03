@@ -7,23 +7,26 @@ import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 import spring.controller.HomeController;
 import spring.controller.HomeControllerAdvice;
+import spring.repository.UserRepository;
 import spring.service.HomeService;
 
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
-// 不使用注解，而是使用MockMvcBuilders来build构建MockMvc
 public class MockMvcBuilderIT {
 
+    // 不使用注解，而是使用MockMvcBuilders来build构建MockMvc
     private MockMvc mockMvc;
     private HomeController homeController;
 
-    // TODO. 如果要测试ExceptionHandler的处理，则必须设置注定的ControllerAdvice
+    // TODO. 如果要测试ExceptionHandler的处理，必须设置自定义ControllerAdvice
     @BeforeEach
     public void init() {
         HomeService homeService = Mockito.mock(HomeService.class);
-        homeController = new HomeController(homeService);
+        UserRepository userRepository = Mockito.mock(UserRepository.class);
+
+        homeController = new HomeController(homeService, userRepository);
         mockMvc = MockMvcBuilders.standaloneSetup(homeController)
                 .setControllerAdvice(new HomeControllerAdvice())
                 .build();

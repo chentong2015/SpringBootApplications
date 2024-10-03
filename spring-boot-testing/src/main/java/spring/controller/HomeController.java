@@ -1,9 +1,8 @@
 package spring.controller;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import spring.model.MyClass;
+import spring.bean.Request;
 import spring.repository.UserRepository;
 import spring.service.HomeService;
 
@@ -11,13 +10,16 @@ import spring.service.HomeService;
 public class HomeController {
 
     private final HomeService homeService;
+    private final UserRepository userRepository;
 
-    @Autowired
-    UserRepository userRepository;
-
-    @Autowired
-    public HomeController(HomeService homeService) {
+    public HomeController(HomeService homeService, UserRepository userRepository) {
         this.homeService = homeService;
+        this.userRepository = userRepository;
+    }
+
+    @GetMapping("/")
+    public String home() {
+        return "home";
     }
 
     @GetMapping("/index")
@@ -26,13 +28,14 @@ public class HomeController {
     }
 
     @GetMapping("/greeting")
-    public @ResponseBody String greeting() {
+    @ResponseBody
+    public String greeting() {
         return homeService.greet();
     }
 
     @PostMapping("/post")
-    public ResponseEntity<String> post(@RequestBody MyClass myClass) {
-        String result = myClass.getStatus() != null ? "OK" : "Error";
+    public ResponseEntity<String> post(@RequestBody Request request) {
+        String result = request.getStatus() != null ? "OK" : "Error";
         return ResponseEntity.ok(result);
     }
 }

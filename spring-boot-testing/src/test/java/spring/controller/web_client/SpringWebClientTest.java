@@ -1,4 +1,4 @@
-package spring.controller.web_test_client;
+package spring.controller.web_client;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -6,10 +6,12 @@ import org.springframework.boot.test.autoconfigure.web.reactive.AutoConfigureWeb
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.web.reactive.server.WebTestClient;
 
-@SpringBootTest()
+// 必须使用RANDOM_PORT随机端口测试
+@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 @AutoConfigureWebTestClient
-public class SpringWebTestClient {
+public class SpringWebClientTest {
 
+    // @AutoConfigureWebTestClient自动装配WebTestClient Bean
     @Autowired
     private WebTestClient webClient;
 
@@ -19,6 +21,6 @@ public class SpringWebTestClient {
                 .exchange()
                 .expectStatus().is2xxSuccessful()
                 .expectBody(String.class)
-                .isEqualTo("Spring Native and Beyond!");
+                .isEqualTo("home");
     }
 }

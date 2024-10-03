@@ -1,13 +1,13 @@
-package spring.model;
+package spring.bean;
 
-public class MyClass {
+public class Request {
 
     private int id;
     private String name;
     private String status;
     private String code;
 
-    public MyClass(int id, String name, String status, String code) {
+    public Request(int id, String name, String status, String code) {
         this.id = id;
         this.name = name;
         this.status = status;

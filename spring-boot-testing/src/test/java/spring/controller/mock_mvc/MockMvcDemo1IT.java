@@ -9,14 +9,13 @@ import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.ResultMatcher;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 
-import static org.assertj.core.internal.bytebuddy.matcher.ElementMatchers.is;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
-// @AutoConfigureMockMvc自动装配MockMvc bean对象
 @SpringBootTest
 @AutoConfigureMockMvc
-public class MockMvcIT1 {
+public class MockMvcDemo1IT {
 
+    // @AutoConfigureMockMvc自动装配MockMvc bean对象
     @Autowired
     private MockMvc mockMvc;
 
@@ -27,6 +26,6 @@ public class MockMvcIT1 {
                         .contentType(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk())
                 .andExpect(content().contentTypeCompatibleWith(MediaType.APPLICATION_JSON))
-                .andExpect((ResultMatcher) jsonPath("$[0].name", is("bob")));
+                .andExpect((ResultMatcher) jsonPath("$[0].name").value("bob"));
     }
 }
