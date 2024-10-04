@@ -7,10 +7,10 @@ import spring.service.HomeService;
 @RestController
 public class HomeController {
 
-    private final HomeService homeService;
+    private HomeService homeService;
 
     public HomeController(HomeService homeService) {
-        this.homeService = homeService;
+       this.homeService = homeService;
     }
 
     @GetMapping("/")
@@ -25,7 +25,7 @@ public class HomeController {
 
     @GetMapping("/greeting")
     @ResponseBody
-    public String greeting() {
+    private String greeting() {
         return homeService.greet();
     }
 

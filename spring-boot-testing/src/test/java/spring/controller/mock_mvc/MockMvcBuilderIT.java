@@ -20,11 +20,13 @@ public class MockMvcBuilderIT {
     private MockMvc mockMvc;
     private HomeController homeController;
 
-    // TODO. 如果要测试ExceptionHandler的处理，必须设置自定义ControllerAdvice
     @BeforeEach
     public void init() {
+        // TODO. 使用构造器注入Bean，方便集成测试
         HomeService homeService = Mockito.mock(HomeService.class);
         homeController = new HomeController(homeService);
+
+        // TODO. 必须设置自定义ControllerAdvice测试ExceptionHandler的处理
         mockMvc = MockMvcBuilders.standaloneSetup(homeController)
                 .setControllerAdvice(new HomeControllerAdvice())
                 .build();
