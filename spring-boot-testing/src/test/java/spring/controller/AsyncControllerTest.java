@@ -1,4 +1,4 @@
-package spring.service;
+package spring.controller;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -7,7 +7,7 @@ import spring.SpringBootTestingApplication;
 
 @WebAppConfiguration
 @SpringBootTest(classes = SpringBootTestingApplication.class)
-public class ControllerServiceAsyncTest {
+public class AsyncControllerTest {
 
     // @Autowired
     // private BaseService baseService;

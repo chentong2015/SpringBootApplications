@@ -24,9 +24,7 @@ public class MockMvcBuilderIT {
     @BeforeEach
     public void init() {
         HomeService homeService = Mockito.mock(HomeService.class);
-        UserRepository userRepository = Mockito.mock(UserRepository.class);
-
-        homeController = new HomeController(homeService, userRepository);
+        homeController = new HomeController(homeService);
         mockMvc = MockMvcBuilders.standaloneSetup(homeController)
                 .setControllerAdvice(new HomeControllerAdvice())
                 .build();

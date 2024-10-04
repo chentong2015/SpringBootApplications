@@ -5,10 +5,9 @@ import org.springframework.stereotype.Component;
 @Component
 public class BeanInjection {
 
-    private int id;
+    private int id = 10;
 
-    public BeanInjection(int id) {
-        this.id = id;
+    public BeanInjection() {
     }
 
     public int getId() {

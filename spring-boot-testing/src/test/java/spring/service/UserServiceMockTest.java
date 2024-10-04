@@ -22,9 +22,8 @@ public class UserServiceMockTest {
 
     // 定义当调用mock userDao的getUserNameById(1)方法时返回特定的数据
     @Test
-    public void getUserById() throws Exception {
+    public void getUserById() {
         Mockito.when(userRepository.getUserNameById(1L)).thenReturn("Test");
-        String username = userService.getUserId(1L);
-        Assertions.assertEquals("Test", username);
+        Assertions.assertEquals("Test", userService.getUserId(1L));
     }
 }

@@ -1,13 +1,13 @@
-package spring.bean;
+package spring.controller;
 
-public class Request {
+public class RequestContent {
 
     private int id;
     private String name;
     private String status;
     private String code;
 
-    public Request(int id, String name, String status, String code) {
+    public RequestContent(int id, String name, String status, String code) {
         this.id = id;
         this.name = name;
         this.status = status;
