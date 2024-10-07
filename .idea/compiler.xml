@@ -8,29 +8,34 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="spring-boot-server" />
-        <module name="spring-boot-work-projects" />
-        <module name="spring-boot-starter-custom" />
         <module name="retail_experience_server" />
         <module name="spring-boot-tester1" />
-        <module name="demo-spring-boot" />
         <module name="spring-boot-testing" />
         <module name="spring-boot-client" />
         <module name="spring-boot-caching" />
         <module name="spring-boot-tester2" />
         <module name="spring-boot-upload-download-files" />
         <module name="retail_experience_client" />
+        <module name="spring-boot-thymeleaf" />
         <module name="retail_experience_admin" />
         <module name="spring-boot-auto-configure" />
+        <module name="website-projects" />
         <module name="spring-common-api" />
+        <module name="spring-boot-application" />
+        <module name="tomcat-web-container" />
         <module name="spring-boot-swagger-api" />
         <module name="blog-website" />
         <module name="spring-boot-upload-download-example" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="demo-application" target="17" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="blog-website" options="-parameters" />
+      <module name="spring-boot-application" options="" />
     </option>
   </component>
 </project>
