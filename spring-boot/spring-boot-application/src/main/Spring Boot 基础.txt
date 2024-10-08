@@ -1,4 +1,0 @@
-Spring Boot: 构建在Spring MVC之上(依赖spring-webmvc)
-1. 不需Spring MVC原始web.xml配置，使用注解+SPI机制(servlet3.0规范)
-2. 使用内嵌的tomcat包自动部署并启动jar包，不能打包jsp文件
-3. 使用Spring Boot时不推荐使用注解@EnableWebMvc，可导致无法使用WebMvcAutoConfiguration功能

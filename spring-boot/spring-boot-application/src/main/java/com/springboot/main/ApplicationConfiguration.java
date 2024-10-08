@@ -6,6 +6,7 @@ import org.springframework.scheduling.annotation.EnableAsync;
 import org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor;
 import java.util.concurrent.Executor;
 
+// 不推荐使用注解@EnableWebMvc，可导致无法使用WebMvcAutoConfiguration功能
 @Configuration
 @EnableAsync
 public class ApplicationConfiguration {

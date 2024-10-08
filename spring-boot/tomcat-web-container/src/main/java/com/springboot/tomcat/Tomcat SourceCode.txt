@@ -2,7 +2,8 @@ Spring Boot + tomcat
 1. 先创建Spring容器
 2. 再创建Web Server/启动tomcat
 
-TODO: Spring Boot内嵌tomcat的启动和配置: TomcatServletWebServerFactory
+TODO: Spring Boot内嵌tomcat的启动和配置: 无法打包.jsp文件
+TomcatServletWebServerFactory
 @Override
 public WebServer getWebServer(ServletContextInitializer... initializers) {
 	if (this.disableMBeanRegistry) {

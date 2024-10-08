@@ -24,6 +24,10 @@
             <version>3.3.4</version>
         </dependency>
 
+        <!-- Spring Boot热部署工具: 自动检测classpath文件变更并自动生效
+         1. 配置系统属性 spring.devtools.restart.enabled=true
+         2. 配置IDEA编译器 compiler > build project automatically
+            Advanced settings > compiler > Allow auto-make to start -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-devtools</artifactId>

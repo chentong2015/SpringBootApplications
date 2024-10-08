@@ -9,7 +9,7 @@ import org.apache.catalina.startup.Tomcat;
 import org.springframework.web.context.support.AnnotationConfigWebApplicationContext;
 import org.springframework.web.servlet.DispatcherServlet;
 
-public class MySpringApplicationStarter {
+public class SpringTomcatStarter {
 
     private static String hostname = "localhost";
     private static int port = 8081;
