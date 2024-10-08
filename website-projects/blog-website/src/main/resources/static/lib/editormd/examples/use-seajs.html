@@ -51,7 +51,7 @@
         <script src="../lib/raphael.min.js"></script>
         <script src="js/sea.js"></script>
         <script type="text/javascript">
-            seajs.config({
+            seajs.conditional({
                 base  : "./",
                 alias : {
                     jquery   : "js/jquery.min",
@@ -161,14 +161,14 @@
                 });
                 
                 $("#toc-menu-btn").click(function(){
-                    testEditor.config({
+                    testEditor.conditional({
                         tocDropdown   : true,
                         tocTitle      : "目录 Table of Contents",
                     });
                 });
                 
                 $("#toc-default-btn").click(function() {
-                    testEditor.config("tocDropdown", false);
+                    testEditor.conditional("tocDropdown", false);
                 });
             });
         </script>

@@ -70,7 +70,7 @@
          * @return  void
          */
         
-        public function config($configs) 
+        public function conditional($configs)
         {
             foreach($configs as $key => $value)
             {

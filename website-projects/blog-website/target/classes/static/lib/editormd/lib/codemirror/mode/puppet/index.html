@@ -43,7 +43,7 @@ class automysqlbackup (
   $etc_dir = $automysqlbackup::params::etc_dir,
   $backup_dir = $automysqlbackup::params::backup_dir,
   $install_multicore = undef,
-  $config = {},
+  $conditional = {},
   $config_defaults = {},
 ) inherits automysqlbackup::params {
 
@@ -52,7 +52,7 @@ class automysqlbackup (
   validate_absolute_path($etc_dir)
   validate_absolute_path($backup_dir)
 
-# Create a subdirectory in /etc for config files
+# Create a subdirectory in /etc for conditional files
   file { $etc_dir:
     ensure => directory,
     owner => 'root',
@@ -96,9 +96,9 @@ class automysqlbackup (
     mode => '0755',
   }
 
-# If you'd like to keep your config in hiera and pass it to this class
-  if !empty($config) {
-    create_resources('automysqlbackup::backup', $config, $config_defaults)
+# If you'd like to keep your conditional in hiera and pass it to this class
+  if !empty($conditional) {
+    create_resources('automysqlbackup::backup', $conditional, $config_defaults)
   }
 
 # If using RedHat family, must have the RPMforge repo's enabled

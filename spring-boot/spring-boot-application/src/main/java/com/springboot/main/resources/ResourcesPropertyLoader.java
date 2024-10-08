@@ -15,6 +15,11 @@ public class ResourcesPropertyLoader {
     public ResourcesPropertyLoader() throws IOException {
         loadPropertiesFile();
         loadXmlPropertyFile();
+
+        // TODO. 从指定的资源文件路径中批量加载配置属性到Environment
+        // ConfigurableEnvironment environment;
+        // List<PropertySource<?>> propertySources = propertiesPropertySourceLoader.load("Config", resource);
+        // propertySources.forEach(environment.getPropertySources()::addLast);
     }
 
     private void loadPropertiesFile() throws IOException {

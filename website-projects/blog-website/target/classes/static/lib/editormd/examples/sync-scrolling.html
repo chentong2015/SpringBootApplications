@@ -22,7 +22,7 @@
 
 #### Setting
 
-config:
+conditional:
 
 ```javascript
 {
@@ -34,9 +34,9 @@ config:
 function:
 
 ```javascript
-editor.config("syncScrolling", true);
-//editor.config("syncScrolling", false);
-//editor.config("syncScrolling", "single");
+editor.conditional("syncScrolling", true);
+//editor.conditional("syncScrolling", false);
+//editor.conditional("syncScrolling", "single");
 ```
 </textarea>
             </div>
@@ -54,15 +54,15 @@ editor.config("syncScrolling", true);
                 });
                 
                 $(".bisync-btn").click(function(){
-                    testEditor.config("syncScrolling", true);
+                    testEditor.conditional("syncScrolling", true);
                 });
                 
                 $(".single-btn").click(function(){
-                    testEditor.config("syncScrolling", "single");
+                    testEditor.conditional("syncScrolling", "single");
                 });
                 
                 $(".disabled-btn").click(function(){
-                    testEditor.config("syncScrolling", false);
+                    testEditor.conditional("syncScrolling", false);
                 });
             });
         </script>

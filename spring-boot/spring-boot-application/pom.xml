@@ -10,6 +10,7 @@
     </parent>
 
     <artifactId>spring-boot-application</artifactId>
+    <packaging>jar</packaging>
 
     <properties>
         <maven.compiler.source>17</maven.compiler.source>
@@ -24,7 +25,7 @@
             <version>3.3.4</version>
         </dependency>
 
-        <!-- Spring Boot热部署工具: 自动检测classpath文件变更并自动生效
+        <!-- TODO. Spring Boot热部署工具: 自动检测classpath文件变更并自动生效
          1. 配置系统属性 spring.devtools.restart.enabled=true
          2. 配置IDEA编译器 compiler > build project automatically
             Advanced settings > compiler > Allow auto-make to start -->
@@ -34,4 +35,27 @@
             <version>3.3.4</version>
         </dependency>
     </dependencies>
+
+    <build>
+        <plugins>
+            <!-- TODO. Spring Boot Jar 打包插件
+            将package打包阶段生成的jar包进行repackage打包成可执行的jar包
+            自定义jar包启动的mainClass主函数 -->
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <version>3.3.4</version>
+                <configuration>
+                    <mainClass>com.springboot.main.SpringBootStarterApplication</mainClass>
+                </configuration>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>repackage</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
 </project>

@@ -216,14 +216,14 @@
                 });
                 
                 $("#toc-menu-btn").click(function(){
-                    testEditor.config({
+                    testEditor.conditional({
                         tocDropdown   : true,
                         tocTitle      : "目录 Table of Contents",
                     });
                 });
                 
                 $("#toc-default-btn").click(function() {
-                    testEditor.config("tocDropdown", false);
+                    testEditor.conditional("tocDropdown", false);
                 });
             });
         </script>

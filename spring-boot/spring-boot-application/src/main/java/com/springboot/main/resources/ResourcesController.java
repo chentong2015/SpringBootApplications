@@ -17,7 +17,6 @@ public class ResourcesController {
 
     @GetMapping("/resources")
     public ResponseEntity<String> resource() throws IOException {
-        System.out.println("Load classpath resources");
         String content = this.resourceLoader.getResource("classpath:resource.xml")
                 .getContentAsString(Charset.defaultCharset());
         return ResponseEntity.ok(content);

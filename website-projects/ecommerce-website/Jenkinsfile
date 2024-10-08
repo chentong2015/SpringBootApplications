@@ -27,7 +27,7 @@ pipeline {
 
     // post after stages:
     // for entire pipeline
-    // an implicit step albeit with explicit config here, unlike implicit checkout stage
+    // an implicit step albeit with explicit conditional here, unlike implicit checkout stage
     post {
         always {
             // junit '**/target/surefire-reports/TEST-*.xml'

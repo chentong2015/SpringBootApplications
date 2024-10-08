@@ -38,7 +38,7 @@
         </div>   
         <script src="js/require.min.js"></script>
         <script type="text/javascript">            
-            requirejs.config({
+            requirejs.conditional({
                 baseUrl: "../lib/",
                 paths: {
                     jquery          : "../examples/js/jquery.min",
@@ -159,14 +159,14 @@
                 });
                 
                 $("#toc-menu-btn").click(function(){
-                    testEditor.config({
+                    testEditor.conditional({
                         tocDropdown   : true,
                         tocTitle      : "目录 Table of Contents",
                     });
                 });
                 
                 $("#toc-default-btn").click(function() {
-                    testEditor.config("tocDropdown", false);
+                    testEditor.conditional("tocDropdown", false);
                 });
             });
         </script>

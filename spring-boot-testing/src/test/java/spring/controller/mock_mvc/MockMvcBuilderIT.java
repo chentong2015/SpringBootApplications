@@ -7,7 +7,6 @@ import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 import spring.controller.HomeController;
 import spring.controller.HomeControllerAdvice;
-import spring.repository.UserRepository;
 import spring.service.HomeService;
 
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;

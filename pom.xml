@@ -10,11 +10,11 @@
     <packaging>pom</packaging>
 
     <modules>
-        <module>spring-boot-project</module>
         <module>spring-boot</module>
+        <module>template-skeleton</module>
+        <module>spring-boot-project</module>
         <module>spring-boot-testing</module>
         <module>website-projects</module>
-        <module>spring-boot-project/spring-boot-thymeleaf</module>
     </modules>
 
     <properties>

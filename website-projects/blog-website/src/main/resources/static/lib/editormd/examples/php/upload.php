@@ -34,7 +34,7 @@
     {        
         $imageUploader = new EditorMdUploader($savePath, $saveURL, $formats['image'], false);  // Ymdhis表示按日期生成文件名，利用date()函数
         
-        $imageUploader->config(array(
+        $imageUploader->conditional(array(
             'maxSize' => 1024,        // 允许上传的最大文件大小，以KB为单位，默认值为1024
             'cover'   => true         // 是否覆盖同名文件，默认为true
         ));

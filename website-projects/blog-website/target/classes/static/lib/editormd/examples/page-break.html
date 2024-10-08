@@ -75,11 +75,11 @@
                 });
                 
                 $("#disabled-btn").click(function(){
-                    testEditor.config("pageBreak", false);
+                    testEditor.conditional("pageBreak", false);
                 });
                 
                 $("#enabled-btn").click(function(){
-                    testEditor.config("pageBreak", true);
+                    testEditor.conditional("pageBreak", true);
                 });
             });
         </script>

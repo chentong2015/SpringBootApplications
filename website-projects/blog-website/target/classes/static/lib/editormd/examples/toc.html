@@ -154,14 +154,14 @@ WebKit 是一个开源的浏览器引擎，与之相应的引擎有 Gecko（Mozi
                 });
                 
                 $("#insert-btn").click(function() {
-                    testEditor.config({
+                    testEditor.conditional({
                         tocContainer : "#custom-toc-container",
                         tocDropdown   : false
                     });
                 });
                 
                 $("#menu-btn").click(function(){
-                    testEditor.config({
+                    testEditor.conditional({
                         tocContainer  : "",
                         tocDropdown   : true,
                         tocTitle      : "目录 Table of Contents dsfsadfsfdsdf",
@@ -169,7 +169,7 @@ WebKit 是一个开源的浏览器引擎，与之相应的引擎有 Gecko（Mozi
                 });
                 
                 $("#menu2-btn").click(function(){
-                    testEditor.config({
+                    testEditor.conditional({
                         tocContainer  : "#custom-toc-container",
                         tocDropdown   : true,
                         tocTitle      : "目录 Table of Contents dsfsadfsfdsdf",
@@ -178,7 +178,7 @@ WebKit 是一个开源的浏览器引擎，与之相应的引擎有 Gecko（Mozi
                 
                 $("#default-btn").click(function() {
                     $("#custom-toc-container").html("#custom-toc-container");
-                    testEditor.config({
+                    testEditor.conditional({
                         tocContainer : "",
                         tocm : false,
                         tocDropdown  : false
@@ -187,7 +187,7 @@ WebKit 是一个开源的浏览器引擎，与之相应的引擎有 Gecko（Mozi
                 
                 $("#tocm-btn").click(function() {
                     $("#custom-toc-container").html("#custom-toc-container");
-                    testEditor.config({
+                    testEditor.conditional({
                         tocm : true,
                         tocContainer : "",
                         tocDropdown   : false

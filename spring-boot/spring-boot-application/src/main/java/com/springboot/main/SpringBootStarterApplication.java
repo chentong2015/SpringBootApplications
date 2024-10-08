@@ -2,7 +2,10 @@ package com.springboot.main;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.system.ApplicationHome;
 import org.springframework.context.ConfigurableApplicationContext;
+
+import java.io.File;
 
 // TODO. Spring Boot启动注意
 // 1. 启动类型不能放置在空包路径下(default package)
@@ -13,6 +16,7 @@ import org.springframework.context.ConfigurableApplicationContext;
 //      @Filter(type = FilterType.CUSTOM,classes = {TypeExcludeFilter.class}),
 //      @Filter(type = FilterType.CUSTOM,classes = {AutoConfigurationExcludeFilter.class}
 //    )}
+
 @SpringBootApplication
 // @EntityScan("com.spring.data.jpa.entity")
 // @EnableJpaRepositories("com.spring.data.jpa.repositories")
@@ -24,5 +28,9 @@ public class SpringBootStarterApplication {
 
         ConfigurableApplicationContext applicationContext = SpringApplication.run(SpringBootStarterApplication.class, args);
         System.out.println(applicationContext.isActive());
+
+        ApplicationHome home = new ApplicationHome(SpringBootStarterApplication.class);
+        File folder = home.getDir();          // returns the folder where the jar is.
+        File folderSource = home.getSource(); // returns the jar absolute filepath.
     }
 }

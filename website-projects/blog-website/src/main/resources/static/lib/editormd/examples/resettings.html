@@ -30,9 +30,9 @@
                 <textarea style="display:none;">#### Resetting examples
 
 ```javascript
-this.config("lineNumbers", false);
+this.conditional("lineNumbers", false);
 
-this.config({
+this.conditional({
     toc                  : false,
     tex                  : false,
     previewCodeHighlight : true, // before set previewCodeHighlight == false, editor not load pretty.js, so now codes can't highlight and display line numbers.
@@ -44,7 +44,7 @@ this.config({
     toolbar              : true
 });
 
-this.config("onresize", function() {
+this.conditional("onresize", function() {
     console.log("onresize =&gt;", this);
 });
 ```</textarea></div>
@@ -75,9 +75,9 @@ this.config("onresize", function() {
                         onload               : function() {
                             console.log('onload', this);
                             
-                            this.config("lineNumbers", false);
+                            this.conditional("lineNumbers", false);
                             
-                            this.config({
+                            this.conditional({
                                 toc                  : false,
                                 tex                  : false,
                                 toolbar              : true,
@@ -90,7 +90,7 @@ this.config("onresize", function() {
                                 dialogMaskBgColor    : "#000"
                             });
                 
-                            this.config("onresize", function() {
+                            this.conditional("onresize", function() {
                                 console.log("onresize =>", this);
                             });
                             

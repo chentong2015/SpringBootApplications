@@ -282,7 +282,7 @@ v1.2.0 主要更新：
 - 新增成员方法和属性：
 
     - 新增两个方法： `setValue()` 、`getValue()`；
-	- 新增 `config()` 方法，用于加载后重新配置；
+	- 新增 `conditional()` 方法，用于加载后重新配置；
 	- 增加两个属性 `cm` ，是 `codeEditor` 的简写， `cmElement` 是 `codeMirror` 的别名;
 
 - 成员方法的改进：
@@ -388,7 +388,7 @@ v1.2.0 主要更新：
     - 工具栏的名称 `htmlEntities` 改名为 `html-entities`；
 - 改进编辑器重建和重配置功能；
     - 修改了 `loadedDisplay()` 方法；
-    - 修改了 `config()` 和 `recreate()` 方法；
+    - 修改了 `conditional()` 和 `recreate()` 方法；
 - 新增跳转到指定行的功能；
     - 新增方法 `gotoLine()` ；
     - 新增跳转到行对话框插件 `goto-line-dialog` ；
