@@ -1,4 +1,4 @@
-package com.springboot.main.controller;
+package com.springboot.main.resources;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.ResourceLoader;

@@ -1,5 +1,7 @@
 package com.springboot.main;
 
+import com.springboot.main.properties.MyConfigurationProperty;
+import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.scheduling.annotation.EnableAsync;
@@ -9,6 +11,7 @@ import java.util.concurrent.Executor;
 // 不推荐使用注解@EnableWebMvc，可导致无法使用WebMvcAutoConfiguration功能
 @Configuration
 @EnableAsync
+@EnableConfigurationProperties({MyConfigurationProperty.class})
 public class ApplicationConfiguration {
 
     // 使用线程池来运行并发的线程，设置最大并发线程数和阻塞队列
