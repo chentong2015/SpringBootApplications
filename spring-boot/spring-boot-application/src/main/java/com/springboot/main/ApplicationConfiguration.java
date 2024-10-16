@@ -1,4 +1,4 @@
-package com.springboot.main.config;
+package com.springboot.main;
 
 import com.springboot.main.properties.MyConfigurationProperty;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
@@ -9,7 +9,6 @@ import org.springframework.scheduling.annotation.EnableAsync;
 import org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor;
 import org.springframework.web.filter.ShallowEtagHeaderFilter;
 
-import java.util.Arrays;
 import java.util.List;
 import java.util.concurrent.Executor;
 
