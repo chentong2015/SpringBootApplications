@@ -1,4 +1,4 @@
-package com.springboot.main.controller.async;
+package com.springboot.main.controller;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -9,7 +9,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 @RestController
-public class AsyncRestController {
+public class RestAsyncController {
 
     // TODO: 必须在@service的方法上标注 @Async("asyncTaskExecutor")
     // 将耗时的操作并发的执行，然后Endpoint立即返回response到client端
