@@ -1,4 +1,4 @@
-package enable_auto_configure;
+package auto_configure_selector;
 
 import org.springframework.context.annotation.Import;
 
