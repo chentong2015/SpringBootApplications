@@ -1,0 +1,16 @@
+# 所有和项目构建无关的文件都应该避免提交到git仓库
+# 通过UI在提交时自定义检查
+# https://git-scm.com/docs/gitignore
+
+# 注明git提交时需要忽略的目录或者文件
+#java
+target/*
+out/
+.classpath
+
+#intellij idea
+.idea
+*.iml
+
+# Mac-specific hidden file
+**/.DS_Store

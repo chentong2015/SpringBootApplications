@@ -1,0 +1,18 @@
+TODO. Spring IT Test 集成测试
+1. 由于Spring Context中Bean可被替换，从而易于测试
+2. 所有的IT Test测试类必须位于Package包下面，否则无法启动
+
+spring-boot-starter-test 集成了下面的四种测试
+1. Sprint Test (Testing tool and integration testing support)
+2. JUnit 从Boot 2.4开始集成JUnit5，需要自定义补充JUnit4框架
+3. Hamcrest
+4. Mockito
+
+使用@RunWith注解的测试类型为JUnit4测试提供支持
+@RunWith(SpringRunner.class)
+  provides a bridge between Spring Boot test features and JUnit.
+  Whenever we are using any Spring Boot testing features in our JUnit tests
+
+@RunWith(SpringJUnit4ClassRunner.class)
+  import org.junit.runner.RunWith;
+  import org.springframework.test.context.junit4.SpringRunner;
