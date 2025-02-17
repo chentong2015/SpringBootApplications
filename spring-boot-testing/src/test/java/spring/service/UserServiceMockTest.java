@@ -15,8 +15,8 @@ public class UserServiceMockTest {
     @Autowired
     private UserService userService;
 
-    // Mock掉UserService中自动注入的bean对象, 使用Mock的对象注入UserService
-    // 自定义mock对象的方法调用的行为和逻辑
+    // Mock掉UserService中自动注入的bean对象
+    // 使用Mock的对象注入UserService, 自定义mock对象的方法调用的行为和逻辑
     @MockBean
     private UserRepository userRepository;
 

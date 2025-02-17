@@ -6,7 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-public class BeanComponentTest {
+public class MockBeanComponentTest {
 
     @Autowired
     private BeanInjection beanInjection;
@@ -14,15 +14,17 @@ public class BeanComponentTest {
     @Autowired
     private BeanComponent component;
 
-    // 通过Setter注入新的Bean对象用于测试，区别于自动注入容器的Bean
     @Test
     public void testBeanInjection() {
+        // 测试Spring自动注入的Bean对象
         System.out.println(this.beanInjection.getId());
 
+        // 测试自定义创建的Bean对象，区别于自动注入容器的Bean
         BeanInjection mockInjection = new BeanInjection();
         mockInjection.setId(100);
         component.setBeanInjection(mockInjection);
         component.printBeanId();
+
         Assertions.assertTrue(true);
     }
 }
