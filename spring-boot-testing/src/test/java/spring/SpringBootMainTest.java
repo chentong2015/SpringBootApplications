@@ -6,7 +6,6 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.TestPropertySource;
-import spring.config.ExcludedTestingConfiguration;
 import spring.service.HomeService;
 
 // TODO. 关于SpringBootTest测试的配置
@@ -25,7 +24,7 @@ import spring.service.HomeService;
             "spring.security.user.name=test",
             "spring.security.user.password=test123"
     })
-@EnableAutoConfiguration(exclude = ExcludedTestingConfiguration.class)
+@EnableAutoConfiguration(exclude = MyExcludedTestConfig.class)
 @ContextConfiguration(locations = {"classpath:spring.bean.MyTestBean"})
 @TestPropertySource(locations = "classpath:application-it.properties")
 @ActiveProfiles("test")

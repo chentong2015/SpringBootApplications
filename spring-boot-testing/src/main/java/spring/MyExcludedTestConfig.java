@@ -1,8 +1,8 @@
-package spring.config;
+package spring;
 
 import org.springframework.context.annotation.Configuration;
 
 // This special configuration should be removed during testing
 @Configuration
-public class ExcludedTestingConfiguration {
+public class MyExcludedTestConfig {
 }

@@ -13,8 +13,8 @@
         <module>spring-boot-app</module>
         <module>spring-boot-auto-configure</module>
         <module>spring-boot-testing</module>
-        <module>spring-boot-skeleton</module>
-        <module>tomcat-web-container</module>
+        <module>template-skeleton</module>
+        <module>spring-boot-container-tomcat</module>
     </modules>
 
     <properties>

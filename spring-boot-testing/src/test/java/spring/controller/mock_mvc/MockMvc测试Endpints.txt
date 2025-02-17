@@ -1,4 +1,8 @@
-MockMvc: send HTTP requests into the DispatcherServlet and make assertions about the result
+TODO. MockMvc是Spring IT测试的一个Library类库
+提供对于Web Endpoints的测试，主要用于测试REST Controller
+
+MockMvc: send HTTP requests into the DispatcherServlet
+and make assertions about the result
 MockHttpServletRequest:
      HTTP Method = GET
      Request URI = /
@@ -19,7 +23,8 @@ MockHttpServletResponse:
          Cookies = []
 
 TODO: 使用MockMvcResultMatchers来匹配测试返回的结果
-https://www.tabnine.com/code/java/methods/org.springframework.test.web.servlet.result.MockMvcResultMatchers/jsonPath
+https://www.tabnine.com/code/java/methods/
+org.springframework.test.web.servlet.result.MockMvcResultMatchers/jsonPath
 mockMvc.perform(get("/myapp/resource/1"))
 	.andExpect(status().isOk())
 	.andExpect(jsonPath("$[0].date").exists())

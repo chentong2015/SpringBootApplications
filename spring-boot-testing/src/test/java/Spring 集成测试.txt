@@ -1,6 +1,6 @@
 TODO. Spring IT Test 集成测试
 1. 由于Spring Context中Bean可被替换，从而易于测试
-2. 所有的IT Test测试类必须位于Package包下面，否则无法启动
+2. 所有IT Test测试类必须位于Package包下面，否则无法启动
 
 spring-boot-starter-test 集成了下面的四种测试
 1. Sprint Test (Testing tool and integration testing support)

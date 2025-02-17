@@ -9,7 +9,7 @@
         <version>1.0-SNAPSHOT</version>
     </parent>
 
-    <artifactId>spring-boot-skeleton</artifactId>
+    <artifactId>template-skeleton</artifactId>
     <packaging>pom</packaging>
 
     <modules>

@@ -1,4 +1,4 @@
-package spring.controller.mock_mvc.web_mvc;
+package spring.controller.mock_mvc;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,7 +18,7 @@ import static org.mockito.Mockito.when;
 // TODO. 使用@WebMvcTest来限制要测试的web layer, 而非启动整个Spring Context
 //  Spring Boot instantiates only the web layer rather than the whole context.
 @WebMvcTest(HomeController.class)
-public class WebMockControllerTest {
+public class MockMvcTestIT {
 
     @Autowired
     private MockMvc mockMvc;

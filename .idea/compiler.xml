@@ -8,12 +8,12 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="spring-boot-server" />
+        <module name="spring-boot-container-tomcat" />
         <module name="spring-common-api" />
         <module name="spring-boot-auto-configure" />
         <module name="spring-boot-app" />
         <module name="spring-boot-testing" />
         <module name="spring-boot-client" />
-        <module name="tomcat-web-container" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
