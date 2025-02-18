@@ -1,5 +1,6 @@
-TODO. Spring IT Test 集成测试
-所有IT Test测试类必须位于Package包下面，否则无法启动
+TODO. Spring IT 测试类不能位于空包路径下
+@SpringBootTest自动找到主启动类@SpringBootApplication
+@SpringBootApplication必须位于测试类的包路径中
 
 Spring context cache 提升集成测试的时间
  - 集成测试需要准备ApplicationContext init需要时间

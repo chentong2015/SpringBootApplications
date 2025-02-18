@@ -1,4 +1,4 @@
-package spring.controller;
+package spring.model;
 
 public class RequestContent {
 
@@ -6,6 +6,9 @@ public class RequestContent {
     private String name;
     private String status;
     private String code;
+
+    public RequestContent() {
+    }
 
     public RequestContent(int id, String name, String status, String code) {
         this.id = id;

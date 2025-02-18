@@ -1,5 +1,6 @@
 package spring.controller.mock_mvc;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -8,12 +9,12 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.http.MediaType;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.MvcResult;
-import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
+import spring.model.RequestContent;
 
-import java.io.InputStream;
-
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
+import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
@@ -25,21 +26,15 @@ public class MockMvcDemo2IT {
     private MockMvc mockMvc;
 
     @Test
-    void get_index() {
-        try {
-            mockMvc.perform(MockMvcRequestBuilders.get("/index")
-                            .accept(MediaType.APPLICATION_JSON))
-                    .andExpect(status().isOk())
-                    .andExpect(content().string("Index Page"));
-        } catch (Exception exception) {
-            System.out.println("Error");
-        }
+    void get_index() throws Exception {
+        mockMvc.perform(get("/index").accept(MediaType.APPLICATION_JSON))
+                .andExpect(status().isOk())
+                .andExpect(content().string("Index Page"));
     }
 
     @Test
     void test_with_param() throws Exception {
-        MvcResult result = mockMvc.perform(
-                MockMvcRequestBuilders.post("/accounts/login.action")
+        MvcResult result = mockMvc.perform(post("/accounts/login.action")
                         .param("username", "20116524")
                         .param("password", "Password"))
                 .andExpect(MockMvcResultMatchers.status().isOk())
@@ -49,20 +44,22 @@ public class MockMvcDemo2IT {
                 .andExpect(MockMvcResultMatchers.jsonPath("$.isPasswordEmpty").value(false))
                 .andExpect(MockMvcResultMatchers.jsonPath("$.isAccountValid").value(false))
                 .andReturn();
+
+        String body = result.getResponse().getContentAsString();
+        System.out.println(body);
         Assertions.assertNotNull(result);
     }
 
-    // TODO. 提供的JSON格式的数据流和发送请求的contentType类型必须保持一致
-    // 从classpath资源文件路径添加测试数据
     @Test
     void testPostMethod() throws Exception {
-        InputStream resourceStream = this.getClass().getResourceAsStream("request.json");
-        assert resourceStream != null;
+        RequestContent requestContent = new RequestContent(10, "test objects", "none", "123");
+        String jsonObject = new ObjectMapper().writeValueAsString(requestContent);
+
         mockMvc.perform(post("/post")
-                        .content(resourceStream.readAllBytes())
+                        .content(jsonObject)
                         .contentType(MediaType.APPLICATION_JSON))
+                .andDo(print())
                 .andExpect(status().isOk())
                 .andExpect(content().string("OK"));
-        resourceStream.close();
     }
 }

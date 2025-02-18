@@ -9,8 +9,7 @@ import org.springframework.test.context.TestPropertySource;
 import spring.config.MyExcludedTestConfig;
 import spring.service.HomeService;
 
-// TODO. @SpringBootTest自动找到主启动类启动Spring Application Context
-// 1. 配置要启动的Spring Boot Main类
+// 1. 配置要启动的SpringBoot启动类，否则根据Package包路径查找
 // 2. 配置应用启动的随机端口，避免多个测试post冲突
 // 3. 设置测试时使用的properties属性
 @SpringBootTest(classes = SpringBootTestingApplication.class,

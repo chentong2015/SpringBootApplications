@@ -2,12 +2,13 @@ package spring.controller;
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import spring.model.RequestContent;
 import spring.service.HomeService;
 
 @RestController
 public class HomeController {
 
-    private HomeService homeService;
+    private final HomeService homeService;
 
     public HomeController(HomeService homeService) {
        this.homeService = homeService;
