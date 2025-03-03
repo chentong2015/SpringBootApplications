@@ -25,6 +25,7 @@
       <module name="retail_experience_client" target="11" />
       <module name="retail_experience_server" target="11" />
       <module name="spring-boot" target="17" />
+      <module name="spring-boot-application" target="17" />
       <module name="spring-boot-basics" target="11" />
       <module name="spring-boot-caching" target="17" />
       <module name="spring-boot-exception-handler" target="17" />
@@ -39,6 +40,7 @@
       <module name="spring-boot-upload-download-example" target="15" />
       <module name="spring-boot-upload-download-files" target="11" />
       <module name="spring-boot-work-projects" target="17" />
+      <module name="tomcat-web-container" target="15" />
       <module name="website-projects" target="17" />
     </bytecodeTargetLevel>
   </component>
