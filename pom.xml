@@ -10,11 +10,11 @@
     <packaging>pom</packaging>
 
     <modules>
+        <module>skeleton-template</module>
         <module>spring-boot-app</module>
         <module>spring-boot-auto-configure</module>
-        <module>spring-boot-testing</module>
-        <module>template-skeleton</module>
         <module>spring-boot-container-tomcat</module>
+        <module>spring-boot-testing</module>
     </modules>
 
     <properties>

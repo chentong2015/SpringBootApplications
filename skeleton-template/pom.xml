@@ -9,7 +9,7 @@
         <version>1.0-SNAPSHOT</version>
     </parent>
 
-    <artifactId>template-skeleton</artifactId>
+    <artifactId>skeleton-template</artifactId>
     <packaging>pom</packaging>
 
     <modules>
