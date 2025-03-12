@@ -1,4 +1,4 @@
-package spring.controller.mock_mvc;
+package spring.mock_mvc;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;

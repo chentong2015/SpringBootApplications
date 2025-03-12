@@ -1,4 +1,4 @@
-package spring.controller.mock_mvc;
+package spring.mock_mvc;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.jupiter.api.Assertions;
