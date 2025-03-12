@@ -8,8 +8,14 @@ import org.springframework.web.bind.annotation.*;
 import java.net.URI;
 
 @RestController
-@RequestMapping("/v1/base")
+@RequestMapping("/v1")
 public class GetterController {
+
+    @GetMapping(value = "/base")
+    @ResponseBody
+    public String base() {
+        return "Base response";
+    }
 
     // 设置请求返回数据的MediaType类型
     @GetMapping(value = "/data", produces = MediaType.APPLICATION_JSON_VALUE)
@@ -18,15 +24,9 @@ public class GetterController {
     }
 
     // 测试设置参数的默认值，required=true默认为必选
-    @GetMapping("/hello")
-    public ResponseEntity<String> hello(@RequestParam(name = "name", defaultValue = "victor") String name) {
+    @GetMapping("/test")
+    public ResponseEntity<String> test(@RequestParam(name = "name", defaultValue = "victor") String name) {
         return ResponseEntity.ok("hello " + name);
-    }
-
-    // 测试Server端正常处理，返回entity-body不包含任何内容
-    @GetMapping("/no-content")
-    @ResponseStatus(HttpStatus.NO_CONTENT)
-    public void testNoContent() {
     }
 
     // 测试HttpStatus NO_CONTENT
@@ -39,6 +39,12 @@ public class GetterController {
     @GetMapping("/error")
     public ResponseEntity<String> error() {
         return new ResponseEntity<>("INTERNAL SERVER ERROR", HttpStatus.INTERNAL_SERVER_ERROR);
+    }
+
+    // 测试Server端正常处理，返回entity-body不包含任何内容
+    @GetMapping("/no-content")
+    @ResponseStatus(HttpStatus.NO_CONTENT)
+    public void testNoContent() {
     }
 
     // TODO. 对于不带body的ResponseEntity的build构建
