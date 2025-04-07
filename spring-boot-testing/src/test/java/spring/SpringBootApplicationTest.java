@@ -14,17 +14,11 @@ import spring.service.HomeService;
 // 3. 设置测试时使用的properties属性
 @SpringBootTest(classes = SpringBootTestingApplication.class,
     webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT,
-    properties = {
-            "spring.security.user.name=test",
-            "spring.security.user.password=test123"
-    })
-
+    properties = {"spring.security.user.name=test", "spring.security.user.password=test123"})
 // 激活针对于测试的Profile
 @ActiveProfiles("test")
-
 // 配置测试时要移除的Configuration
 @EnableAutoConfiguration(exclude = MyExcludedTestConfig.class)
-
 // 加载特殊的配置文件用于测试
 @ContextConfiguration(locations = {"classpath:spring.bean.MyTestBean"})
 @TestPropertySource(locations = "classpath:application-it.properties")

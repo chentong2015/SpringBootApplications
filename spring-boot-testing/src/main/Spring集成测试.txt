@@ -7,7 +7,7 @@ Spring context cache 提升集成测试的时间
  - 并行的测试，缓存中的state of context可能出错
 
 Spring Context Bean可被替换，从而易于测试
- - Spring profiles 通过配置不同profile来移除
- - @MockBean       通过使用Mock Bean来替换
+ - Spring profiles        配置不同profile来移除
+ - @MockBean/MockitoBean  使用Mock Bean替换, 注意新旧版本
  - @ConditionalOnProperty 通过属性值来移除
- - @EnableAutoConfiguration(exclude=NotIncludedConfig.class) 通过移除Config来移除Bean
+ - @EnableAutoConfiguration(exclude=NotIncludedConfig.class) 通过Config移除Bean
