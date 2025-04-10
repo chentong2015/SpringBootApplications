@@ -38,19 +38,19 @@
 
     <build>
         <plugins>
-            <!-- TODO. Spring Boot Jar 打包插件
-            将package打包阶段生成的jar包进行repackage打包成可执行的jar包
-            自定义jar包启动的mainClass主函数 -->
+            <!-- TODO. 针对SpringBoot应用的插件: start; stop; run; test-run; -->
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <version>3.3.4</version>
                 <configuration>
+                    <!-- TODO. spring-boot:run 执行Goal直接启动应用 -->
                     <mainClass>com.springboot.main.SpringBootStarterApplication</mainClass>
                 </configuration>
                 <executions>
                     <execution>
                         <goals>
+                            <!-- spring-boot:repackage 执行重新打包的Goal目标 -->
                             <goal>repackage</goal>
                         </goals>
                     </execution>
