@@ -7,7 +7,6 @@ import org.springframework.context.ConfigurableApplicationContext;
 
 import java.io.File;
 
-
 @SpringBootApplication
 public class SpringBootStarterApplication {
 

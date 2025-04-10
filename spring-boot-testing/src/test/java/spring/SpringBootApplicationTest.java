@@ -1,11 +1,13 @@
 package spring;
 
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.TestPropertySource;
+import org.springframework.test.context.junit.jupiter.SpringExtension;
 import spring.config.MyExcludedTestConfig;
 import spring.service.HomeService;
 
@@ -22,9 +24,16 @@ import spring.service.HomeService;
 // 加载特殊的配置文件用于测试
 @ContextConfiguration(locations = {"classpath:spring.bean.MyTestBean"})
 @TestPropertySource(locations = "classpath:application-it.properties")
+// 为测试添加Extension扩展，控制测试前后执行逻辑
+@ExtendWith(SpringExtension.class)
 public class SpringBootApplicationTest {
 
-    // TODO. 在测试时注入用于测试的bean
+    // TODO. 不能在测试类型中直接添加@Bean方法
+    //  Test Class cannot include @Bean methods
+    // public MyClass myClass() {
+    //     return new MyClass();
+    // }
+
     // 测试Main的启动并从SpringContext中获取注入的bean
     @Test
     public void testSpringBootApplicationMain() {
