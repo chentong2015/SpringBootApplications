@@ -25,6 +25,14 @@
             <version>3.3.4</version>
         </dependency>
 
+        <!-- TODO. Spring Boot Actuator 执行器工具: 提供应用运行时指标
+        Spring Boot Actuator provides production ready features to help monitor and manage app -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-actuator</artifactId>
+            <version>3.3.4</version>
+        </dependency>
+
         <!-- TODO. Spring Boot热部署工具: 自动检测classpath文件变更并自动生效
          1. 配置系统属性 spring.devtools.restart.enabled=true
          2. 配置IDEA编译器 compiler > build project automatically
