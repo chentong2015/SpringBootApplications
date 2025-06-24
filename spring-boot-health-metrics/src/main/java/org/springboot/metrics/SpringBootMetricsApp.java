@@ -10,7 +10,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class SpringBootMetricsApp {
 
     @Autowired
-    SpringBootHealthIndicator healthIndicator;
+    DiskSpaceMetrics diskSpaceMetrics;
 
     public static void main(String[] args) {
         SpringApplication.run(SpringBootMetricsApp.class, args);
@@ -18,7 +18,7 @@ public class SpringBootMetricsApp {
 
     @PostConstruct
     public void postConstruct() {
-        Health health = healthIndicator.health();
+        Health health = diskSpaceMetrics.health();
         System.out.println(health.getStatus());
         System.out.println(health.getStatus().getCode());
     }

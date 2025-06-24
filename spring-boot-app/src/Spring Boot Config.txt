@@ -8,5 +8,3 @@ https://docs.spring.io/spring-boot/docs/current/reference/html/application-prope
 
 https://spring.io/projects/spring-boot#support
 https://docs.spring.io/spring-boot/system-requirements.html
-
-

@@ -8,7 +8,7 @@ import org.springframework.boot.actuate.health.Status;
 import java.io.File;
 
 @Component
-public class SpringBootHealthIndicator implements HealthIndicator {
+public class DiskSpaceMetrics implements HealthIndicator {
 
     @Override
     public Health health() {

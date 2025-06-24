@@ -1,0 +1,39 @@
+http://localhost:8080/actuator/metrics/hikaricp.connections
+{
+  "name": "hikaricp.connections",
+  "description": "Total connections",
+  "measurements": [
+    {
+      "statistic": "VALUE",
+      "value": 5
+    }
+  ],
+  "availableTags": [
+    {
+      "tag": "pool",
+      "values": [
+        "HikariPool-1"
+      ]
+    }
+  ]
+}
+
+http://localhost:8080/actuator/metrics/hikaricp.connections.active
+{
+  "name": "hikaricp.connections.active",
+  "description": "Active connections",
+  "measurements": [
+    {
+      "statistic": "VALUE",
+      "value": 0
+    }
+  ],
+  "availableTags": [
+    {
+      "tag": "pool",
+      "values": [
+        "HikariPool-1"
+      ]
+    }
+  ]
+}
