@@ -7,7 +7,7 @@ import org.springframework.stereotype.Component;
 // 1. 自动调用CommandLineRunner的run()实现方法
 // 2. 通过run()方法来初始化或者测试应用的启动状态
 @Component
-public class CustomCommandLineRunner implements CommandLineRunner {
+public class MyCommandLineRunner implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {

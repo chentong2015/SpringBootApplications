@@ -15,6 +15,7 @@
         <module>spring-boot-auto-configure</module>
         <module>spring-boot-container-tomcat</module>
         <module>spring-boot-testing</module>
+        <module>spring-boot-health-metrics</module>
     </modules>
 
     <properties>

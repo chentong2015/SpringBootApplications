@@ -22,15 +22,7 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
-            <version>3.3.4</version>
-        </dependency>
-
-        <!-- TODO. Spring Boot Actuator 执行器工具: 提供应用运行时指标
-        Spring Boot Actuator provides production ready features to help monitor and manage app -->
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-actuator</artifactId>
-            <version>3.3.4</version>
+            <version>3.4.5</version>
         </dependency>
 
         <!-- TODO. Spring Boot热部署工具: 自动检测classpath文件变更并自动生效

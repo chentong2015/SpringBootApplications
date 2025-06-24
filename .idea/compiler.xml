@@ -14,6 +14,7 @@
         <module name="spring-boot-app" />
         <module name="spring-boot-testing" />
         <module name="spring-boot-client" />
+        <module name="spring-boot-health-metrics" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>

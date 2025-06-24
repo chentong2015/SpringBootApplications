@@ -1,4 +1,4 @@
-package com.springboot.main;
+package org.springboot.metrics;
 
 import org.springframework.stereotype.Component;
 

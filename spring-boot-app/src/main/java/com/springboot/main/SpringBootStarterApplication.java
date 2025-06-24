@@ -1,7 +1,6 @@
 package com.springboot.main;
 
 import org.springframework.boot.SpringApplication;
-import org.springframework.boot.actuate.health.Health;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.system.ApplicationHome;
 import org.springframework.context.ConfigurableApplicationContext;
@@ -33,9 +32,5 @@ public class SpringBootStarterApplication {
         ApplicationHome home = new ApplicationHome(SpringBootStarterApplication.class);
         File folder = home.getDir();          // returns the folder where the jar is.
         File folderSource = home.getSource(); // returns the jar absolute filepath.
-
-        SpringBootHealthIndicator healthIndicator = applicationContext.getBean(SpringBootHealthIndicator.class);
-        Health health = healthIndicator.health();
-        System.out.println(health.getStatus().getCode()); // UP or DOWN
     }
 }
