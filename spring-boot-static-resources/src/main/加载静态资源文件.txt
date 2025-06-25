@@ -1,0 +1,10 @@
+Spring Boot APP 启动后可以访问静态资源, 方便测试/避免跨域请求
+
+By default, Spring serves static resources from the following 4 locations on the classpath:
+/META-INF/resources/
+/public/
+/resources/
+/static/
+
+Customize default locations by configuration property
+spring.web.resources.static-locations=classpath:/folder
