@@ -10,7 +10,8 @@ import java.time.Duration;
 @Configuration
 public class WebConfiguration implements WebMvcConfigurer {
 
-    // TODO. 配置静态资源的缓存策略，避免后端频繁的返回数据(无更新时)
+    // TODO. 配置静态资源的缓存策略, 避免后端频繁的返回数据(无更新时)
+    //  当用户清除浏览器缓存后, 请求时必须重新返回数据到客户端
     // The resources are served with 7 days future expiration
     // to ensure maximum use of the browser cache and a reduction in HTTP requests made by the browser.
     // The Last-Modified information is deduced from Resource#lastModified
