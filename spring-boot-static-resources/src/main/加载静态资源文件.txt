@@ -1,10 +1,12 @@
-Spring Boot APP 启动后可以访问静态资源, 方便测试/避免跨域请求
+TODO. Spring Web 静态资源访问
+1. 启动应用后访问静态资源文件, 方便测试/避免跨域请求
+2. 提供静态资源访问的WebFlux应用可能存在安全问题
 
-By default, Spring serves static resources from the following 4 locations on the classpath:
+Spring serves static resources from 4 classpath locations:
 /META-INF/resources/
 /public/
 /resources/
 /static/
 
-Customize default locations by configuration property
+Customize default locations by configuration property:
 spring.web.resources.static-locations=classpath:/folder
