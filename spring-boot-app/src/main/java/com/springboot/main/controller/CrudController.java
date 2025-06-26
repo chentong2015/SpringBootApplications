@@ -17,19 +17,15 @@ public class CrudController {
         return "get: ok";
     }
 
-    @PostMapping("/data/post")
-    public String post(@RequestParam("id") Long id) {
-        return "post: ok";
+    // 测试设置参数的默认值
+    @GetMapping("/test")
+    public String test(@RequestParam(name = "name", defaultValue = "victor") String name) {
+        return "hello " + name;
     }
 
-    // TODO. 处理(消费)提供的JSON格式的数据
-    @PostMapping(value = "/data",
-            consumes = MediaType.APPLICATION_JSON_VALUE,
-            produces = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseBean post(@RequestBody RequestBean requestBean) {
-        System.out.println(requestBean.message);
-        return new ResponseBean("content");
-    }
+    // 设置非必须参数required=false
+    @PostMapping("/data/post")
+    public String post(@RequestParam(name = "id", required = false) Long id) { return "post: ok"; }
 
     // 不同类型的请求会被分发到不同的Controller方法
     // 即使具有完全一致的URL路径，DELETE Request不会分配到PUT Method
@@ -41,6 +37,16 @@ public class CrudController {
     @PutMapping("/data/{id}")
     public String delete(@PathVariable Long id) {
         return "put: ok";
+    }
+
+
+    // TODO. 处理(消费)提供的JSON格式的数据
+    @PostMapping(value = "/data",
+            consumes = MediaType.APPLICATION_JSON_VALUE,
+            produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseBean post(@RequestBody RequestBean requestBean) {
+        System.out.println(requestBean.message);
+        return new ResponseBean("content");
     }
 
     public class RequestBean {
