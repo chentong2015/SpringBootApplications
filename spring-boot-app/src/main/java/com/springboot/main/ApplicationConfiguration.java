@@ -1,4 +1,4 @@
-package com.springboot.main.config;
+package com.springboot.main;
 
 import com.springboot.main.properties.MyConfigurationProperty;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;

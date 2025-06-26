@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Encoding">
+    <file url="file://$APPLICATION_HOME_DIR$/bin/src/main/java" charset="UTF-8" />
+    <file url="file://$APPLICATION_HOME_DIR$/bin/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../SpringBootAppProjects/spring-boot-exception-handler/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../SpringBootAppProjects/spring-boot-exception-handler/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../SpringBootAppProjects/spring-boot-file-uploader/src/main/java" charset="UTF-8" />
@@ -13,14 +15,6 @@
     <file url="file://$PROJECT_DIR$/../SpringBootAppProjects/website-projects/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/demo-application/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/demo-application/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/spring-boot-app-skeleton/spring-boot-client/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/spring-boot-app-skeleton/spring-boot-client/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/spring-boot-app-skeleton/spring-boot-server/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/spring-boot-app-skeleton/spring-boot-server/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/spring-boot-app-skeleton/spring-common-api/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/spring-boot-app-skeleton/spring-common-api/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/spring-boot-app-skeleton/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/spring-boot-app-skeleton/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/spring-boot-app/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/spring-boot-app/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/spring-boot-auto-configure/src/main/java" charset="UTF-8" />
@@ -29,6 +23,14 @@
     <file url="file://$PROJECT_DIR$/spring-boot-container-tomcat/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/spring-boot-health-metrics/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/spring-boot-health-metrics/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring-boot-skeleton/spring-boot-client/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring-boot-skeleton/spring-boot-client/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring-boot-skeleton/spring-boot-server/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring-boot-skeleton/spring-boot-server/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring-boot-skeleton/spring-common-api/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring-boot-skeleton/spring-common-api/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring-boot-skeleton/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring-boot-skeleton/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/spring-boot-static-resources/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/spring-boot-static-resources/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/spring-boot-testing/src/main/java" charset="UTF-8" />
