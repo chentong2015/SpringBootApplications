@@ -12,7 +12,6 @@ import java.net.URI;
 public class CrudController {
 
     @GetMapping(value = "/get")
-    @ResponseBody
     public String get() {
         return "get: ok";
     }
