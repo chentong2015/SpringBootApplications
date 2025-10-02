@@ -1,4 +1,4 @@
-package com.springboot.main;
+package com.springboot.main.config;
 
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
