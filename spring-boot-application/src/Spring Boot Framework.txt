@@ -1,0 +1,10 @@
+TODO. Spring Boot 系统要求/版本时间线
+1. Spring Boot版本和Build Tool构建工具之后需要兼容
+2. Spring Boot版本和JDK版本需要兼容
+3. Spring Boot版本和其它Dependency版本需要兼容
+
+https://spring.io/projects/spring-boot#support
+https://docs.spring.io/spring-boot/system-requirements.html
+
+TODO. Common Application Properties
+https://docs.spring.io/spring-boot/docs/current/reference/html/application-properties.html
