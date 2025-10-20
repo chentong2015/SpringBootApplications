@@ -9,7 +9,7 @@
         <version>1.0-SNAPSHOT</version>
     </parent>
 
-    <artifactId>spring-boot-app</artifactId>
+    <artifactId>spring-boot-application</artifactId>
     <packaging>jar</packaging>
 
     <properties>

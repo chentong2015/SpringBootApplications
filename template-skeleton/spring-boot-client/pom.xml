@@ -5,11 +5,12 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>org.example</groupId>
-        <artifactId>SpringBootApplications</artifactId>
+        <artifactId>template-skeleton</artifactId>
         <version>1.0-SNAPSHOT</version>
+        <relativePath>../pom.xml</relativePath>
     </parent>
 
-    <artifactId>spring-boot-static-resources</artifactId>
+    <artifactId>spring-boot-client</artifactId>
 
     <properties>
         <maven.compiler.source>17</maven.compiler.source>
@@ -19,9 +20,20 @@
 
     <dependencies>
         <dependency>
+            <groupId>org.example</groupId>
+            <artifactId>spring-common-api</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.example</groupId>
+            <artifactId>spring-boot-server</artifactId>
+        </dependency>
+
+        <!-- 使用直接依赖，不使用spring-boot-server中的传递性依赖 -->
+        <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
-            <version>3.4.5</version>
+            <version>2.5.5</version>
         </dependency>
     </dependencies>
 </project>
