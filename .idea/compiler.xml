@@ -11,7 +11,6 @@
         <module name="spring-boot-tomcat-container" />
         <module name="spring-common-api" />
         <module name="spring-boot-auto-configure" />
-        <module name="spring-boot-testing" />
         <module name="spring-boot-resources" />
         <module name="spring-boot-application" />
         <module name="spring-boot-client" />
@@ -37,6 +36,7 @@
       <module name="spring-boot-swagger-api" target="17" />
       <module name="spring-boot-tester1" target="11" />
       <module name="spring-boot-tester2" target="11" />
+      <module name="spring-boot-testing" target="17" />
       <module name="spring-boot-thymeleaf" target="17" />
       <module name="spring-boot-upload-download-example" target="15" />
       <module name="spring-boot-upload-download-files" target="11" />
