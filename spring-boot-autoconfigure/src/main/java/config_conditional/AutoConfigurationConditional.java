@@ -1,3 +1,5 @@
+package config_conditional;
+
 import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.context.annotation.Bean;
@@ -8,7 +10,7 @@ import org.springframework.context.annotation.Configuration;
 // matchIfMissing=true    即使属性条件不满足仍然match并注入
 @Configuration
 @ConditionalOnProperty(value = "isEnabled", havingValue = "true", matchIfMissing = false)
-public class ConditionalConfiguration {
+public class AutoConfigurationConditional {
 
     // 只有当该Bean缺失时才注入该Bean，避免和用户自定义注入冲突
     @Bean

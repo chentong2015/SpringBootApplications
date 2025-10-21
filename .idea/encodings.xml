@@ -17,8 +17,8 @@
     <file url="file://$PROJECT_DIR$/demo-application/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/spring-boot-application/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/spring-boot-application/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/spring-boot-auto-configure/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/spring-boot-auto-configure/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring-boot-autoconfigure/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring-boot-autoconfigure/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/spring-boot-health-metrics/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/spring-boot-health-metrics/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/spring-boot-resources/src/main/java" charset="UTF-8" />

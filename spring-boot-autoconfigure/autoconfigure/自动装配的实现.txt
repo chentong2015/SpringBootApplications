@@ -1,3 +1,12 @@
+TODO. 自动装配bean的注入，通过文件中的声明进行指定
+@SpringBootConfiguration
+    > @EnableAutoConfiguration 默认开启自动装配注解
+       > @Import({AutoConfigurationImportSelector.class}) 引入bean的选择器
+          > spring-boot-autoconfigure-xxx.RELEASE\META-INF\spring.factories 读取文件位置
+          > spring-boot-autoconfigure-xxx.RELEASE\META-INF\org.springframework.boot.autoconfigure.AutoConfiguration.imports 新版本文件位置
+
+自动装配Import源码的实现(区别不同版本)
+AutoConfigurationImportSelector >> selectImports()
 
 org.springframework.boot.autoconfigure.AutoConfigurationImportSelector.class >>
   protected List<String> getCandidateConfigurations(AnnotationMetadata metadata,AnnotationAttributes attributes) {

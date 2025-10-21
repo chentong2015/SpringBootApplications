@@ -7,6 +7,7 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class SystemIntegrationConfiguration {
 
+    // 在没有注入特定Bean的情况下创建实例对象
     @Bean
     @ConditionalOnMissingBean
     AutoConfigService autoConfigService() {
