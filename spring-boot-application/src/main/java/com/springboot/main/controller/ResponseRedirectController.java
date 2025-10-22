@@ -9,7 +9,7 @@ import org.springframework.web.util.UriComponentsBuilder;
 import java.net.URI;
 
 // TODO. 对于Response Url重定向的构建
-@Controller
+@Controller(value = "/v1")
 public class ResponseRedirectController {
 
     // 对于不带body的ResponseEntity的build构建

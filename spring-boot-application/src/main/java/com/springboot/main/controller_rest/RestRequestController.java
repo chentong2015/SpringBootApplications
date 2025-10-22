@@ -1,15 +1,11 @@
-package com.springboot.main.controller;
+package com.springboot.main.controller_rest;
 
-import org.springframework.http.MediaType;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.util.UriComponentsBuilder;
 
-import java.net.URI;
-
+// TODO. @RestController本身不接受Path路径参数
 @RestController
 @RequestMapping("/v1/api/")
-public class CrudController {
+public class RestRequestController {
 
     @GetMapping(value = "/get")
     public String get() {
@@ -38,27 +34,11 @@ public class CrudController {
         return "put: ok";
     }
 
-
-    // TODO. 处理(消费)提供的JSON格式的数据
-    @PostMapping(value = "/data",
-            consumes = MediaType.APPLICATION_JSON_VALUE,
-            produces = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseBean post(@RequestBody RequestBean requestBean) {
-        System.out.println(requestBean.message);
-        return new ResponseBean("content");
-    }
-
-    public class RequestBean {
-        private String message;
-        public RequestBean(String message) {
-            this.message = message;
-        }
-    }
-
-    public class ResponseBean {
-        private String message;
-        public ResponseBean(String message) {
-            this.message = message;
-        }
+    // 获取URL请求路径中"正则表达式"传递的字符串集
+    // http://localhost:8080/v1/path/test-hello_123
+    @GetMapping(value = "{publicId:[\\w\\-]+}")
+    public String testRgxUrl(@PathVariable(value = "publicId") String publicId) {
+        System.out.println(publicId);
+        return "Get: " +  publicId;
     }
 }
