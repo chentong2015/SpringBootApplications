@@ -1,5 +1,6 @@
 package com.springboot.main.config;
 
+import com.springboot.main.properties.MyAdditionalProperty;
 import com.springboot.main.properties.MyConfigurationProperty;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.boot.web.servlet.FilterRegistrationBean;
@@ -12,10 +13,9 @@ import org.springframework.web.filter.ShallowEtagHeaderFilter;
 import java.util.List;
 import java.util.concurrent.Executor;
 
-// 不推荐使用注解@EnableWebMvc，可导致无法使用WebMvcAutoConfiguration功能
 @Configuration
 @EnableAsync
-@EnableConfigurationProperties({MyConfigurationProperty.class})
+@EnableConfigurationProperties({MyConfigurationProperty.class, MyAdditionalProperty.class})
 public class ApplicationConfiguration {
 
     // 使用线程池来运行并发的线程，设置最大并发线程数和阻塞队列

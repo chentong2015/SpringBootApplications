@@ -1,0 +1,6 @@
+TODO. 使用VM Option系统属性在jar运行时配置额外属性
+-Dspring.config.additional-location
+java -jar spring-boot-application.jar -Dspring.config.additional-location=file:config/
+
+相对路径下文件中的属性将会更新Jar包中存在的属性
+config/application.properties

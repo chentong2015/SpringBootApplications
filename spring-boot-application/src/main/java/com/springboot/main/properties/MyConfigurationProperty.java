@@ -2,7 +2,7 @@ package com.springboot.main.properties;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 
-// TODO. 使用注解将属性批量设置到Java Object. 作为Bean对象使用
+// TODO. 匹配引入特定前缀的属性并注入创建的Bean对象实例
 @ConfigurationProperties(prefix = "my")
 public class MyConfigurationProperty {
 
