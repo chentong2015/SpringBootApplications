@@ -10,8 +10,8 @@
         <module name="spring-boot-server" />
         <module name="spring-boot-autoconfigure" />
         <module name="spring-boot-tomcat-container" />
+        <module name="spring-boot-static-resources" />
         <module name="spring-common-api" />
-        <module name="spring-boot-resources" />
         <module name="spring-boot-application" />
         <module name="spring-boot-client" />
         <module name="spring-boot-health-metrics" />

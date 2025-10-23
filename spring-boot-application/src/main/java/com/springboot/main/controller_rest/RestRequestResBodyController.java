@@ -5,9 +5,11 @@ import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.net.URI;
+
 @RestController
-@RequestMapping("/v1")
-public class RestResponseEntityController {
+@RequestMapping("/v1/api")
+public class RestRequestResBodyController {
 
     // 设置请求返回数据的MediaType类型
     @GetMapping(value = "/data", produces = MediaType.APPLICATION_JSON_VALUE)
@@ -26,6 +28,13 @@ public class RestResponseEntityController {
     @GetMapping("/no-content")
     @ResponseStatus(HttpStatus.NO_CONTENT)
     public void testNoContent() {
+    }
+
+    // 对于不带body的ResponseEntity的build构建
+    @GetMapping("/null-content")
+    public ResponseEntity<Void> nullContent() {
+        URI location = URI.create("uri");
+        return ResponseEntity.created(location).build();
     }
 
     // 测试HttpStatus NO_CONTENT

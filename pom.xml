@@ -11,11 +11,11 @@
 
     <modules>
         <module>spring-boot-application</module>
-        <module>template-skeleton</module>
         <module>spring-boot-autoconfigure</module>
-        <module>spring-boot-tomcat-container</module>
         <module>spring-boot-health-metrics</module>
-        <module>spring-boot-resources</module>
+        <module>spring-boot-static-resources</module>
+        <module>spring-boot-tomcat-container</module>
+        <module>template-skeleton</module>
     </modules>
 
     <properties>
