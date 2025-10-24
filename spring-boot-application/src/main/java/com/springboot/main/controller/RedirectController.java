@@ -1,14 +1,13 @@
-package com.springboot.main.controller_redirect;
+package com.springboot.main.controller;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.util.UriComponentsBuilder;
 
 import java.net.URI;
 
-@Controller
+@RestController
 @RequestMapping(value = "/v1")
 public class RedirectController {
 
@@ -19,7 +18,6 @@ public class RedirectController {
     }
 
     @GetMapping(value = "/base")
-    @ResponseBody
     public String base() {
         return "Base page";
     }
@@ -37,7 +35,6 @@ public class RedirectController {
     }
 
     @GetMapping(value = "/data/{id}")
-    @ResponseBody
     public String data(@PathVariable(name = "id") String id) {
         return "Redirect data page: " + id;
     }

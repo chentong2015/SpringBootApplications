@@ -1,4 +1,4 @@
-package com.springboot.main.controller;
+package com.springboot.main.controller.test_private;
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
@@ -6,15 +6,14 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-@RequestMapping(value = "/v1")
-public class PrivateMethodController {
+@RequestMapping(value = "/v1/private")
+public class PrivateEndpointController {
 
-    private PrivateMethodController() {
+    private PrivateEndpointController() {
     }
 
-    // TODO. Spring无法注入private私有构造器的控制器 !!
-    // There was an unexpected error (type=Not Found, status=404).
-    // NoResourceFoundException: No static resource private/value.
+    // TODO. 私有方法不影响Endpoint访问: method.setAccessible(true)
+    // 私有方法可能影响Doc文档生成或相关AOP代理拦截 ?
     @GetMapping("/private-method")
     private ResponseEntity<String> privateMethod() {
         return ResponseEntity.ok().body("private value");

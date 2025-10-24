@@ -1,9 +1,9 @@
-package com.springboot.main.controller_rest;
+package com.springboot.main.controller.rest_controller;
 
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("/v1/api/")
+@RequestMapping("/v1/rest")
 public class RestRequestParamController {
 
     // TODO. @RequestParam 注解参数设置

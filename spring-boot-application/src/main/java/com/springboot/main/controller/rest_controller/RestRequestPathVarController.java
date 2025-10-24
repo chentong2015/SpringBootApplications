@@ -1,10 +1,9 @@
-package com.springboot.main.controller_rest;
+package com.springboot.main.controller.rest_controller;
 
 import org.springframework.web.bind.annotation.*;
 
-// TODO. 相同URL路径的不同请求会被分配到不同的Endpoints
 @RestController
-@RequestMapping("/v1/api/")
+@RequestMapping("/v1/rest")
 public class RestRequestPathVarController {
 
     // TODO. 推荐声明路径参数的name名称
@@ -13,6 +12,7 @@ public class RestRequestPathVarController {
         return "delete: ok";
     }
 
+    // 相同URL路径的不同请求会被分配到不同Endpoints
     @PutMapping("/data/{id}")
     public String delete(@PathVariable(name = "id") Long id) {
         return "put: ok";
