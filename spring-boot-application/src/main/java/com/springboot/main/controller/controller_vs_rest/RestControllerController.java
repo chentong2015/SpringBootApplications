@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping(value = "/v1/rest-controller")
 public class RestControllerController {
 
-    @GetMapping(value = "/get-String")
+    @GetMapping(value = "/get-string")
     public String getString() {
         return "get: ok";
     }

@@ -1,4 +1,4 @@
-package com.springboot.main.controller.return_response_entity;
+package com.springboot.main.controller.response_entity;
 
 import com.springboot.main.model.ResponseObject;
 import org.springframework.web.bind.annotation.GetMapping;

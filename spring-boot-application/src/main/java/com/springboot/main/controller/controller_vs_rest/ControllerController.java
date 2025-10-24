@@ -10,8 +10,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping(value = "/v1/controller")
 public class ControllerController {
 
-    // @ResponseBody 必须手动标记
-    @GetMapping(value = "/get-String")
+    // @ResponseBody 必须手动标记 !!
+    @GetMapping(value = "/get-string")
     public String getString() {
         return "get: ok";
     }
