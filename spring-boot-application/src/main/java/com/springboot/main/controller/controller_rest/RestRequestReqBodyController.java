@@ -1,4 +1,4 @@
-package com.springboot.main.controller.rest_controller;
+package com.springboot.main.controller.controller_rest;
 
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.PostMapping;

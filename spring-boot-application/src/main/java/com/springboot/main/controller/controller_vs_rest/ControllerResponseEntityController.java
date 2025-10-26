@@ -7,7 +7,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-// TODO. 通过返回ResponseEntity来自定义封装返回的ResponseBody
+// TODO. 返回ResponseEntity自定义封装返回ResponseBody结果
 @Controller
 @RequestMapping("/v1/controller-response-entity")
 public class ControllerResponseEntityController {

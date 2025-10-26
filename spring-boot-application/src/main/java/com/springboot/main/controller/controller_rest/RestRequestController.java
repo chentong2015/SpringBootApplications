@@ -1,4 +1,4 @@
-package com.springboot.main.controller.rest_controller;
+package com.springboot.main.controller.controller_rest;
 
 import org.springframework.web.bind.annotation.*;
 
@@ -7,8 +7,8 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/v1/rest")
 public class RestRequestController {
 
-    @GetMapping(value = "/get")
-    public String get() {
+    @GetMapping(value = "/base")
+    public String base() {
         return "get: ok";
     }
 }

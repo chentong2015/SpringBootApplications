@@ -5,7 +5,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-// TODO. @RestController默认将结果封装到ResponseBody返回
+// TODO. @RestController默认将结果封装到ResponseBody结果
 @RestController
 @RequestMapping(value = "/v1/rest-controller")
 public class RestControllerController {
