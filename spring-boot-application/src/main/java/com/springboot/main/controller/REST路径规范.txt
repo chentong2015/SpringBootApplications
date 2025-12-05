@@ -1,4 +1,6 @@
 TODO. Endpoint是为了获取资源
-- Endpoint 路径名称是名词, 其中不能包含敏感信息
+- Endpoint 路径名称是名词
+  @GetMapping(value="/number-validation-levels")
+- Endpoint 不能包含敏感信息
 - @PathVariable @RequestParam 路径参数提供状态或信息仅用于定位资源
 - @RequestBody 请求Body中用于传递大对象的数据
