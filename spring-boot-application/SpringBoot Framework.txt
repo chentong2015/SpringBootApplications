@@ -5,6 +5,3 @@ TODO. Spring Boot 系统要求/版本时间线
 
 https://spring.io/projects/spring-boot#support
 https://docs.spring.io/spring-boot/system-requirements.html
-
-TODO. Common Application Properties
-https://docs.spring.io/spring-boot/docs/current/reference/html/application-properties.html
