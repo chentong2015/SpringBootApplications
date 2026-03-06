@@ -7,6 +7,17 @@ import org.springframework.context.ConfigurableApplicationContext;
 
 import java.io.File;
 
+// TODO. Spring Boot启动属性配置
+// 1. APP启动类型不能放置在空包路径下(default package)
+// 2. 默认扫描范围@SpringBootApplication注解类型下的所有包
+// 3. 可以移除对于特定名称的扫描或自定义扫描包名scanBasePackages
+//
+// 扫描所有标注@Repository, @Service, @Component, @Controller...
+// @ComponentScan(excludeFilters = {
+//     @Filter(type = FilterType.CUSTOM,classes = {TypeExcludeFilter.class}),
+//     @Filter(type = FilterType.CUSTOM,classes = {AutoConfigurationExcludeFilter.class}
+//   )}
+// @EntityScan("com.spring.data.jpa.entity")
 @SpringBootApplication
 public class SpringBootStarterApplication {
 

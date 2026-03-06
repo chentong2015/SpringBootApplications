@@ -1,7 +1,16 @@
-TODO. Spring Boot 系统要求/版本时间线
-1. Spring Boot版本和Build Tool构建工具之后需要兼容
-2. Spring Boot版本和JDK版本需要兼容
-3. Spring Boot版本和其它Dependency版本需要兼容
+TODO. Spring Boot Web Service开发脚手架
+- 基于spring-web和spring-webmvc快速搭建Web API
+- 通过autoconfigure自动装配默认缩写的Beans对象
+- 默认包含tomcat应用启动运行的容器
+- 默认引入json,logging相关的类库
+
+TODO. Spring Boot 系统要求
+1. Spring Boot版本需要兼容Build Tool构建工具
+2. Spring Boot版本需要兼容JDK版本
+3. Spring Boot版本需要兼容第三方Library版本
 
 https://spring.io/projects/spring-boot#support
 https://docs.spring.io/spring-boot/system-requirements.html
+
+Common Application Properties
+https://docs.spring.io/spring-boot/docs/current/reference/html/application-properties.html
