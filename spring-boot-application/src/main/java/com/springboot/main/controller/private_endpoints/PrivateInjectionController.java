@@ -1,4 +1,4 @@
-package com.springboot.main.controller.test_private;
+package com.springboot.main.controller.private_endpoints;
 
 import com.springboot.main.service.PrivateService;
 import org.springframework.http.ResponseEntity;

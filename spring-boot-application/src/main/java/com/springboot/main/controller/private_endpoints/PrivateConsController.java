@@ -1,4 +1,4 @@
-package com.springboot.main.controller.test_private;
+package com.springboot.main.controller.private_endpoints;
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;

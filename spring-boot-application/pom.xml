@@ -21,7 +21,7 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
-            <version>3.5.6</version>
+            <version>4.0.3</version>
         </dependency>
     </dependencies>
 
@@ -31,7 +31,7 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
-                <version>3.3.4</version>
+                <version>4.0.3</version>
                 <configuration>
                     <!-- TODO. spring-boot:run 执行Goal直接启动应用 -->
                     <mainClass>com.springboot.main.SpringBootStarterApplication</mainClass>
