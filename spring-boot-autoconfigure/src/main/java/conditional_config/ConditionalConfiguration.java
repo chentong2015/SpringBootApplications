@@ -1,4 +1,4 @@
-package config_conditional;
+package conditional_config;
 
 import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
@@ -9,12 +9,12 @@ import org.springframework.context.annotation.Configuration;
 // @ConditionalOnProperty 满足指定环境property属性设置才会注入配置中的beans
 // matchIfMissing=true    即使属性条件不满足仍然match并注入
 @Configuration
-@ConditionalOnProperty(value = "isEnabled", havingValue = "true", matchIfMissing = false)
-public class AutoConfigurationConditional {
+@ConditionalOnProperty(prefix = "spring.conditional", value = "isEnabled", havingValue = "true", matchIfMissing = false)
+public class ConditionalConfiguration {
 
     // 只有当该Bean缺失时才注入该Bean，避免和用户自定义注入冲突
-    @Bean
     @ConditionalOnMissingBean
+    @Bean
     public MyConditionalBean myConditionalBean() {
         System.out.println("Inject conditional bean");
         return new MyConditionalBean();
