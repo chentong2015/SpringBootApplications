@@ -1,0 +1,10 @@
+TODO. Spring Boot 版本迁移
+1. System Requirements 检查系统要求 -> JDK, Build Tool
+2. Migration Guide     优先官方文档
+3. Deprecation Removal 废弃API提前适配
+4. Library Dependency  第三方依赖版本兼容 -> Class, Package
+5. Functional Tests    原有功能和测试覆盖
+
+https://docs.spring.io/spring-boot/system-requirements.html
+https://github.com/spring-projects/spring-boot/wiki/Spring-Boot-4.0-Migration-Guide
+https://github.com/spring-projects/spring-framework/wiki/Spring-Framework-7.0-Release-Notes

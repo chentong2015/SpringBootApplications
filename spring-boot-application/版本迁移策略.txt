@@ -1,9 +1,0 @@
-TODO. Spring Boot 版本迁移最佳实践
-1. System Requirements 检查系统要求
-2. Migration Guide DOC 优先查看官方文档 !!
-3. Deprecation Removal 标记废弃的API一定要提前适配 !!
-4. Library Dependency  兼容第三方依赖版本
-5. Functional Tests    保证原有功能和测试覆盖
-
-https://github.com/spring-projects/spring-boot/wiki/Spring-Boot-4.0-Migration-Guide
-https://github.com/spring-projects/spring-framework/wiki/Spring-Framework-7.0-Release-Notes
