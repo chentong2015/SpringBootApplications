@@ -8,7 +8,7 @@
         <artifactId>SpringBootApplications</artifactId>
         <version>1.0-SNAPSHOT</version>
     </parent>
-    <artifactId>spring-boot-application</artifactId>
+    <artifactId>spring-boot-app</artifactId>
     <packaging>jar</packaging>
 
     <properties>
@@ -21,7 +21,7 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
-            <version>4.0.3</version>
+            <version>4.1.0</version>
         </dependency>
     </dependencies>
 
@@ -31,7 +31,7 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
-                <version>4.0.3</version>
+                <version>4.1.0</version>
                 <configuration>
                     <!-- TODO. spring-boot:run 执行Goal直接启动应用 -->
                     <mainClass>com.springboot.main.SpringBootStarterApplication</mainClass>

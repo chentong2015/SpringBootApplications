@@ -1,0 +1,17 @@
+com\springboot\main\properties\MyConfigurationProperty.class
+com\springboot\main\resources\ResourcesPropertyLoader.class
+com\springboot\main\resources\ResourcesController.class
+com\springboot\main\properties\CustomPropertiesController.class
+com\springboot\main\controller_rest\RestRequestResBodyController.class
+com\springboot\main\SpringBootStarterApplication.class
+com\springboot\main\properties\MyAdditionalProperty.class
+com\springboot\main\MyCommandLineRunner.class
+com\springboot\main\controller_rest\RestRequestPathVarController.class
+com\springboot\main\controller\PrivateConsController.class
+com\springboot\main\config\FaviconConfiguration.class
+com\springboot\main\controller_rest\RestRequestController.class
+com\springboot\main\controller_rest\RestRequestResBodyController$ResponseBean.class
+com\springboot\main\controller_rest\RestRequestParamController.class
+com\springboot\main\config\ApplicationConfiguration.class
+com\springboot\main\controller\RedirectController.class
+com\springboot\main\controller_rest\RestRequestResBodyController$RequestBean.class
